@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: khaled
+    name: khaled-project-1
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
