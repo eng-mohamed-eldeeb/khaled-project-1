@@ -10,7 +10,7 @@ gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-
+gem 'sprockets-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -46,4 +46,3 @@ group :development do
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
-
