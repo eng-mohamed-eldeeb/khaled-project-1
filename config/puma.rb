@@ -15,7 +15,7 @@ threads min_threads_count, max_threads_count
 if ENV["RAILS_ENV"] == "production"
   require "concurrent-ruby"
   worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
-  workers worker_count if worker_count > 1
+  workers worker_count if worker_count > 4
 end
 
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
@@ -34,6 +34,6 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 
-workers ENV.fetch("WEB_CONCURRENCY") { 4 }
+# workers ENV.fetch("WEB_CONCURRENCY") { 4 }
 
 payload_app!
