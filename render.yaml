@@ -13,7 +13,7 @@ services:
     # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "bundle exec puma -c config/puma.rb"
     envVars:
-      - key: DATABASE_URL
+      - key: postgres://khaled_qs12_user:ntawYvAxKUIsEenbkKA51Ma8y9TbzLMq@dpg-coion9n79t8c738ksfi0-a/khaled_qs12
         fromDatabase:
           name: khaled
           property: connectionString
